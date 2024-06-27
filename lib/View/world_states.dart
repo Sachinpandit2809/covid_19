@@ -21,7 +21,7 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
    ..repeat();
   @override
   void initState() {
-    // TODO: implement initState
+   
     super.initState();
     // Timer(
     //     Duration(seconds: 5),
@@ -34,7 +34,7 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
     const Color(0Xff1AA260),
     const Color(0xFFDE5246)
   ];
-
+@override
   void dispose() {
     super.dispose();
     _animationController.dispose();
@@ -70,11 +70,11 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
                           "death":
                               double.parse(snapshot.data!.deaths!.toString())
                         },
-                        chartValuesOptions: ChartValuesOptions(
+                        chartValuesOptions: const ChartValuesOptions(
                             showChartValuesInPercentage: true),
-                        animationDuration: Duration(microseconds: 1200),
+                        animationDuration: const Duration(microseconds: 1200),
                         legendOptions:
-                            LegendOptions(legendPosition: LegendPosition.left),
+                            const LegendOptions(legendPosition: LegendPosition.left),
                         chartType: ChartType.ring,
                         colorList: colorList,
                       ),
@@ -110,16 +110,16 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
                               //         .toString()),
                             ],
                           )),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => CountryListScreen(),
+                                  builder: (context) => const CountryListScreen(),
                                 ));
                           },
-                          child: Text("track Country")),
+                          child: const Text("track Country")),
                     ],
                   );
                 }
@@ -132,12 +132,12 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
 
 class ReUsableRow extends StatelessWidget {
   final String title, data;
-  ReUsableRow({required this.title, required this.data});
+  const ReUsableRow({super.key, required this.title, required this.data});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(10, 10, 10, 5),
+      padding: const EdgeInsets.fromLTRB(10, 10, 10, 5),
       child: Column(
         children: [
           Row(
@@ -147,8 +147,8 @@ class ReUsableRow extends StatelessWidget {
               Text(data),
             ],
           ),
-          Divider(),
-          SizedBox(height: 5)
+          const Divider(),
+          const SizedBox(height: 5)
         ],
       ),
     );

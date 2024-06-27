@@ -4,12 +4,12 @@ import 'package:covid_19/View/world_states.dart';
 import 'package:flutter/material.dart';
 import "dart:math" as math;
 
-import 'package:flutter/widgets.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
@@ -20,14 +20,15 @@ class _SplashScreenState extends State<SplashScreen>
         ..repeat();
   @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
     Timer(
-        Duration(seconds: 5),
+        const Duration(seconds: 5),
         () => Navigator.push(context,
-            MaterialPageRoute(builder: (context) => WorldStatesScreen())));
+            MaterialPageRoute(builder: (context) => const WorldStatesScreen())));
   }
 
+  @override
   void dispose() {
     super.dispose();
     _animationController.dispose();
@@ -43,6 +44,7 @@ class _SplashScreenState extends State<SplashScreen>
           children: [
             AnimatedBuilder(
                 animation: _animationController,
+                // ignore: sized_box_for_whitespace
                 child: Container(
                   height: 200,
                   width: 200,

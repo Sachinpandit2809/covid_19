@@ -91,28 +91,28 @@ class WorldStatesModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> _data = <String, dynamic>{};
-    _data["updated"] = updated;
-    _data["cases"] = cases;
-    _data["todayCases"] = todayCases;
-    _data["deaths"] = deaths;
-    _data["todayDeaths"] = todayDeaths;
-    _data["recovered"] = recovered;
-    _data["todayRecovered"] = todayRecovered;
-    _data["active"] = active;
-    _data["critical"] = critical;
-    _data["casesPerOneMillion"] = casesPerOneMillion;
-    _data["deathsPerOneMillion"] = deathsPerOneMillion;
-    _data["tests"] = tests;
-    _data["testsPerOneMillion"] = testsPerOneMillion;
-    _data["population"] = population;
-    _data["oneCasePerPeople"] = oneCasePerPeople;
-    _data["oneDeathPerPeople"] = oneDeathPerPeople;
-    _data["oneTestPerPeople"] = oneTestPerPeople;
-    _data["activePerOneMillion"] = activePerOneMillion;
-    _data["recoveredPerOneMillion"] = recoveredPerOneMillion;
-    _data["criticalPerOneMillion"] = criticalPerOneMillion;
-    _data["affectedCountries"] = affectedCountries;
-    return _data;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data["updated"] = updated;
+    data["cases"] = cases;
+    data["todayCases"] = todayCases;
+    data["deaths"] = deaths;
+    data["todayDeaths"] = todayDeaths;
+    data["recovered"] = recovered;
+    data["todayRecovered"] = todayRecovered;
+    data["active"] = active;
+    data["critical"] = critical;
+    data["casesPerOneMillion"] = casesPerOneMillion;
+    data["deathsPerOneMillion"] = deathsPerOneMillion;
+    data["tests"] = tests;
+    data["testsPerOneMillion"] = testsPerOneMillion;
+    data["population"] = population;
+    data["oneCasePerPeople"] = oneCasePerPeople;
+    data["oneDeathPerPeople"] = oneDeathPerPeople;
+    data["oneTestPerPeople"] = oneTestPerPeople;
+    data["activePerOneMillion"] = activePerOneMillion;
+    data["recoveredPerOneMillion"] = recoveredPerOneMillion;
+    data["criticalPerOneMillion"] = criticalPerOneMillion;
+    data["affectedCountries"] = affectedCountries;
+    return data;
   }
 }

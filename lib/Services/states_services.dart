@@ -18,6 +18,7 @@ class StatesServices {
   }
 
   Future<List<dynamic>> fetchWorldCountry() async {
+    // ignore: prefer_typing_uninitialized_variables
     var data;
     final response = await http.get(Uri.parse(AppUrl.contriesList));
 

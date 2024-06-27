@@ -30,7 +30,7 @@ class _CountryListScreenState extends State<CountryListScreen> {
                   setState(() {});
                 },
                 decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(horizontal: 20),
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 20),
                     hintText: "Search with country name",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(40),
