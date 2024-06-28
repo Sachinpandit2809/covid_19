@@ -1,4 +1,5 @@
 import 'package:covid_19/Services/states_services.dart';
+import 'package:covid_19/View/countrydata_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -73,6 +74,14 @@ class _CountryListScreenState extends State<CountryListScreen> {
                               return Column(
                                 children: [
                                   ListTile(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                    CountryDataScreen(snapshot: snapshot,  index: index)));
+
+                                      },
                                       title: Text(
                                           snapshot.data![index]["country"]),
                                       subtitle: Text(snapshot.data![index]
@@ -91,6 +100,13 @@ class _CountryListScreenState extends State<CountryListScreen> {
                               return Column(
                                 children: [
                                   ListTile(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                  CountryDataScreen(snapshot: snapshot,  index: index)));
+                                      },
                                       title: Text(
                                           snapshot.data![index]["country"]),
                                       subtitle: Text(snapshot.data![index]
