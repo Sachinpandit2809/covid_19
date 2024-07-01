@@ -1,4 +1,5 @@
 import 'package:covid_19/View/world_states.dart';
+import 'package:covid_19/widgets/information_row.dart';
 import 'package:flutter/material.dart';
 
 class CountryDataScreen extends StatelessWidget {
